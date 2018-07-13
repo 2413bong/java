@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SplitTest {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		System.out.println("ÇÐ»ýµéÀÇ Á¡¼ö¸¦  ,·Î ±¸ºÐÇÏ¿© ÀÔ·ÂÇÏ¿© ÁÖ¼¼¿ä");
+		System.out.println("ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  ,ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½Ô·ï¿½ï¿½Ï¿ï¿½ ï¿½Ö¼ï¿½ï¿½ï¿½");
 		String pointStr = scan.nextLine();
 		String[] arrStr = pointStr.split(",");
 		int[] arrNum = new int[arrStr.length];
@@ -14,7 +14,7 @@ public class SplitTest {
 		}
 
 		for (int i = 0; i < arrNum.length; i++) {
-			String str = (i + 1) + "¹øÂ° ÇÐ»ý :" + arrNum[i];
+			String str = (i + 1) + "ï¿½ï¿½Â° ï¿½Ð»ï¿½ :" + arrNum[i];
 			System.out.println(str);
 
 		}
@@ -30,9 +30,12 @@ public class SplitTest {
 				}
 				for(int i=0;i<arrNum.length;i++) {
 				System.out.println(arrNum[i]);	
-				}
+				
 				
 			}
 		}
+		}
 	}
+
 }
+
