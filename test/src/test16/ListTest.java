@@ -48,6 +48,7 @@ public class ListTest {
 		System.out.println("저장한 문자중 찾을 문자를 입력해주세요");
 		String str = scan.nextLine();
 		int idx = lt.indexOf(str);
+		for(int i = 0;i<2;i++) {
 		if (idx == -1) {
 			System.out.println(str + "은 저장한 문자중에 없습니다.");
 		} else {
@@ -55,4 +56,5 @@ public class ListTest {
 		}
 	}
 
+}
 }
