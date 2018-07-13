@@ -9,18 +9,20 @@ public class ArrayExam {
 		int[] arr = new int[5];
 
 		for (int i = 0; i < arr.length; i++) {
-			System.out.println((i + 1) + "¹øÂ°¹è¿­¿¡ Áý¾î³ÖÀ» °ªÀ» ÀûÀ¸½Ã¿À");
+			System.out.println((i + 1) + "ï¿½ï¿½Â°ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ã¿ï¿½");
 			String aa = scan.nextLine();
 			int num = Integer.parseInt(aa);
 			arr[i] = num;
 			for (int j = 0; j < i; j++) {
 				if (arr[i] == (arr[j])) {
-					System.out.println("¹è¿­ÀÇ °ªÀ» Áßº¹µÇÁö ¾Ê°Ô ÀûÀ¸½Ê½Ã¿À");
+					System.out.println("ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ßºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ê½Ã¿ï¿½");
 					i--;
+
 				}
 
 			}
 
+			scan.close();
 		}
 		for (int i = 0; i < arr.length; i++) {
 			System.out.println(arr[i]);
