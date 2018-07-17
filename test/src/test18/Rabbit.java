@@ -41,11 +41,15 @@ public class Rabbit {
 			}
 		}
 	}
-	public  String toString() {
-		return "Rabbit [name=" + name + ",rank= "+rank+" ]";
+	public String toString() {
+		return "Rabbit [rabbitName=" + name + ", rank=" + rank + "]";
 	}
 
-
+	static void printArr(Rabbit[] r) {
+		for(int i=0;i<r.length;i++) {
+			System.out.println(r[i]);
+		}
+	}
 		
 
 	public static void main(String[] args) {
@@ -54,9 +58,9 @@ public class Rabbit {
 
 			random(r);
 			up(r);
-			System.out.println(r);
+			printArr(r);
 			down(r);
-			System.out.println(r);
+			printArr(r);
 			
 
 		}
