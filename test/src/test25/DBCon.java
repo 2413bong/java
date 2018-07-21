@@ -4,18 +4,20 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import test24.DBcon;
+
 public class DBCon {
+	private static final String url ="jdbc:mariadb://localhost:3306/oreo";
+	private static final String id ="root";
+	private static final String pwd ="12345678";
+	private static final String driver ="org.mariadb.jdbc.Driver";
 	private static Connection con;
-	private static final String url = "jdbc:mariadb://localhost:3306/oreo";
-	private static final String userName = "root";
-	private static final String passWord = "12345678";
 
-	private static void openCon() {
-
+	private static void open() {
 		try {
-			Class.forName("org.mariadb.jdbc.Driver");
-			DBCon.con = DriverManager.getConnection(url, userName, passWord);
-			con.setAutoCommit(false);
+			Class.forName(driver);
+			DBCon.con = DriverManager.getConnection(url,id,pwd);
+
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -28,21 +30,24 @@ public class DBCon {
 
 	public static Connection getCon() {
 		if (DBCon.con == null) {
-			openCon();
-
+			open();
 		}
 		return DBCon.con;
 	}
 
-	public static void closeCon() {
-		if (DBCon.con != null) {
+	public static void close() {
+		if(DBCon.con!=null) {
 			try {
 				DBCon.con.close();
-			} catch (Exception e) {
+			}catch(SQLException e) {
 				e.printStackTrace();
 			}
 		}
-		DBCon.con = null;
+		DBCon.con =null;
+		
+	}
+	public static void main(String[] args) {
+		
 	}
 
 }
