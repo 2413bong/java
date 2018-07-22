@@ -19,10 +19,8 @@ public class DBCon {
 			DBCon.con = DriverManager.getConnection(url,id,pwd);
 
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
