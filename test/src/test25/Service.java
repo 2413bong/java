@@ -29,13 +29,13 @@ public class Service {
 				while (!cc) {
 					if (bb.equals("y")) {
 						aa = false;
-						cc = false;
+						cc = true;
 					} else if (bb.equals("n")) {
-						aa = false;
-						cc = false;
+						aa = true;
+						cc = true;
 					} else if (!bb.equals("n") || !bb.equals("y")) {
 						System.out.println("y나n으로만 입력해주십시오");
-						cc = true;
+						cc = false;
 
 					}
 				}
@@ -67,6 +67,8 @@ public class Service {
 				System.out.println("검색할 유저 이름을 적어주세요");
 				String name = scan.nextLine();
 				userInfo.put("uiName", name);
+				System.out.println(userInfo.get("uiName"));
+				aa=true;
 			} else {
 				System.out.println("존재하지 않는 명령어입니다");
 				System.out.println("알맞은 명령어를 입력해주세요");
